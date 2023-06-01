@@ -1,0 +1,187 @@
+@use "../global" as g;
+
+/*!
+layout > footer
+------------------------------
+*/
+
+#footer{
+    width: 100%;
+    padding-top: 0;
+    color: white;
+    background-color: #1C1D20;
+    @include g.mq() {
+        padding-top: 160px;
+    }
+
+    #footer-contact{
+        background: none;
+    }
+    #footer-contact h2{
+        font-size: calc(24px + 4.4vw);
+        width: 50%;
+
+        @include g.mq() {
+            font-size: 6vw;
+            width: 50%;
+        }
+    }
+    .footer-contact-wrap{
+        display: block;
+        max-width: 84vw;
+        margin: 0 auto;
+        padding: 80px 0 160px 0;
+        position: relative;
+
+        @include g.mq() {
+            display: flex;
+            justify-content: space-between;
+            max-width: 68vw;
+        }
+        /*
+        &::after{
+        content: "";
+        position: absolute;
+        top: calc(7vw + 80px);
+        right: 5%;
+        width: 50%;
+        height: 2px;
+        background: white;
+        opacity: .5;
+        z-index: 0;
+        animation: pathslide 2s ease-in-out infinite;
+        opacity:0;
+        }
+        */
+
+
+        .footer-contact-btn-wrap{
+
+            &::before{
+                position: absolute;
+                content: "";
+                bottom: calc((-48px - 24vw / 2) + 2vw + 160px);
+                /*
+                top: calc(7vw + 80px);
+                */
+                right: 30%;
+                width: 70vw;
+                height: 2px;
+                opacity: .5;
+                z-index: 0;
+                animation: pathslide 2s ease-in-out infinite;
+                opacity:0;
+                
+                /*高さ・位置・透過が変化して線が上から下に動く*/
+                @keyframes pathslide{
+                    0%{
+                        opacity: 0;
+                        background: white;
+                    }
+                    30%{
+                        opacity: .35;
+                    }
+                    90%{
+                        width: 4%;
+                        opacity: .7;
+                    }
+                    100%{
+                        width: 0%;
+                        opacity: 1;
+                        background: #6214EE;
+                    }
+                }
+                @include g.mq() {
+                    width: 36vw;
+                    top: calc(7vw + 80px);
+                    right: 5%;
+                    bottom: unset;
+                }
+            }
+        }
+
+        /* 上記の以降作業につき直下を仮配置 */
+        #footer-contact-btn{
+            position: absolute;
+            width: calc(48px + 24vw);
+            height: calc(48px + 24vw);
+            right: -4vw;
+            bottom: 2vw;
+            border-radius: calc(48px + 24vw / 2);
+            font-size: calc(18px + .6vw);
+            text-align: center;
+            line-height: calc(48px + 24vw);
+            color: white;
+            background: #6214EE;
+            transition: all 0.6s;
+
+            @include g.mq() {
+                width: 14vw;
+                height: 14vw;
+                right: 0;
+                bottom: unset;
+                border-radius: 7vw;
+                font-size: calc(12px + .6vw);
+                line-height: 14vw;
+            }
+        }
+    }
+    .footer-nav-wrapper{
+        display: block;
+        width: 84vw;
+        padding-bottom: 130px;
+        margin: 0 auto;
+        @include g.mq() {
+            width: 100%;
+            display: flex;
+            padding: 0;
+        }
+    }
+    .footer-version--wrapper{
+        padding-top: 8vw;
+        padding-bottom: 32px;
+        border-bottom: 1px solid rgba(256,256,256,.2);
+        @include g.mq() {
+            padding-top: 0;
+            border-bottom: none;
+            padding-left: 40px;
+        }
+    }
+    .footer-socials--wrapper{
+        position: absolute;
+        width: auto;
+        margin-top: 32px;
+        @include g.mq() {
+            right: 16px;
+            margin-top: 0;
+        }
+    }
+    .footer-title.socials{
+        @include g.mq() {
+            padding-left: 24px;
+        }
+    }
+    .btn-link a:hover {
+        opacity: 1;
+    }
+    .btn-link a::after{
+        background: #9969f5;
+        transform-origin: right top;/*左上基点*/
+    }
+    .btn-link:hover{
+        transition: all 0.2s;
+    }
+    .links-wrapper{
+        display: flex;
+        list-style: none;
+        position: relative;
+        margin-left: -24px;
+        @include g.mq() {
+            margin-left: 0;
+        }
+    }
+    .links-wrapper .btn-link{
+        justify-content: space-between;
+        text-decoration: none;
+    }
+}

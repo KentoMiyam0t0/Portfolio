@@ -1,0 +1,13 @@
+@use "../global" as g;
+
+/*!
+foundation > font
+------------------------------
+*/
+
+p{font-size: 19px;}
+h5{
+    font-size: .8em;
+    opacity:.5;
+    margin-bottom: 16px;
+}

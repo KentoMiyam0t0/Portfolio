@@ -1,0 +1,51 @@
+@use "../../global" as g;
+
+/*!
+page > home > home-typewriter
+------------------------------
+*/
+
+#wrapper{
+    position: relative;
+}
+#app{
+    position: absolute;
+    width: 100%;
+    /*width: 56%;*/
+    margin: 40px auto;
+    margin-top: calc(80px + 6vw);
+    padding: 40px;
+    /*top: 100px;*/
+    line-height: 1.1;
+    color: black;
+    /*border: 1px solid #ffffff;*/
+    border-radius: 5px;
+    background-color: transparent;
+    /*font-family: "Times New Roman";*/
+    z-index: 4;
+    @include g.mq() {
+        width: 70%;
+    }
+}
+#typewriter{
+    font-size: calc(24px + 5vw);
+}
+#author{
+    display: block;
+    margin-top: 32px;
+    font-size: calc(18px + 2.2vw);
+}
+#typewriter::after {
+    content: "|";
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes blink {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+#canvas{
+    background-color: white;
+    height: auto;
+}

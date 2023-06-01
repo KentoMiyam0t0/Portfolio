@@ -1,0 +1,12 @@
+@use "../global" as g;
+
+/*!
+layout > spacer
+------------------------------
+*/
+.pt-top{
+    padding-top: 160px;
+    @include g.mq() {
+        padding-top: 240px;
+    }
+}

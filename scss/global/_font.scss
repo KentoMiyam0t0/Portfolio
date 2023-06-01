@@ -1,0 +1,11 @@
+/*!
+global > font
+------------------------------
+*/
+@font-face {
+    font-family: Roboto;
+    src: url(https://kentomiyamoto.com/font/Roboto-Regular.ttf);
+}
+:root {
+    --font-family-base: Roboto, sans-serif;
+}

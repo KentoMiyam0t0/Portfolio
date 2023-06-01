@@ -1,0 +1,18 @@
+@use "../global" as g;
+
+/*!
+page > common
+------------------------------
+*/
+
+.catchphrase h1{
+    max-width: 68vw;
+    font-size: calc(24px + 4.4vw);/* Nice font */
+    margin: 0 auto 10vw;
+        
+    br{display: none;
+        @include g.mq() {
+            display: inline;
+        }
+    }
+}

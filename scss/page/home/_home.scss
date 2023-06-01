@@ -1,0 +1,52 @@
+@use "../../global" as g;
+
+/*!
+page > home > home (common)
+------------------------------
+*/
+.home-intro-wrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 160px 0 80px 0;
+    margin: 0 auto;
+    @include g.mq() {
+        max-width: 68vw;
+    }
+}
+
+.home-intro-wrap{
+    h2{
+        width: 72%;
+        line-height: 1.45;
+        /*
+        font-size: 2.4vw;
+        */
+        font-size: calc(12px + 1.4vw);
+    }
+
+}
+
+.home-intro-wrap #home-about{
+    width: calc(48px + 24vw);
+    height: calc(48px + 24vw);
+    border-radius: calc(48px + 24vw / 2);
+    font-size: calc(18px + .6vw);
+    text-align: center;
+    line-height: calc(48px + 24vw);
+    color: white;
+    background: #1C1D20;
+    transition: all 0.6s;
+    z-index: 10;
+    @include g.mq() {
+        width: 14vw;
+        height: 14vw;
+        right: 0;
+        border-radius: 7vw;
+        font-size: calc(12px + .6vw);
+        line-height: 14vw;
+    }
+
+    &:hover{
+        background: #6214EE;
+    }
+}

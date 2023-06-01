@@ -1,0 +1,14 @@
+@use "../global" as g;
+
+/*!
+component > title
+------------------------------
+*/
+.c-title-level2 {
+    font-size: 18px;
+    font-weight: bold;
+
+    @include g.mq() {
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,15 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+<IfModule mod_rewrite.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 days"
+    ExpiresByType image/png "access plus 1 months"
+    ExpiresByType image/jpeg "access plus 1 months"
+    ExpiresByType image/gif "access plus 1 months"
+    ExpiresByType image/webp "access plus 1 months"
+    ExpiresByType text/css "access plus 30 minutes"
+    ExpiresByType text/javascript "access plus 10 hours"
+    ExpiresByType application/javascript "access plus 10 hours"
+</IfModule>

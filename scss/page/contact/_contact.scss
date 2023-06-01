@@ -1,0 +1,219 @@
+@use "../../global" as g;
+
+/*!
+page > contact > contact
+------------------------------
+*/
+
+#contact{
+  header{
+    .btn-link a{
+      color: white;
+
+      &::after{
+        background: white;
+      }
+    }
+  }
+  section{
+    background-color: #1C1D20;
+  }
+  .section-end{
+    background: linear-gradient(180deg, #1C1D20, #8E8E90);
+    padding-bottom: 16vw;
+  }
+  .catchphrase{color: white;}
+  #contact-form{
+    color: white;
+    width: 68vw;
+    margin: 0 auto;
+
+    label,input,textarea{
+      display: block;
+      
+      &:focus{outline-width: 0;}
+    }
+    label{
+      font-size: calc(16px + 1.4vw);
+      margin-bottom: 2vw;
+    }
+    input,textarea{
+      width: 100%;
+      padding: 16px;
+      font-size: calc(16px + 1.4vw);
+      border-radius: 16px;
+      margin-bottom: 4vw;
+
+      &::placeholder{
+        color: rgba(256,256,256,.3);
+      }
+    }
+    textarea{
+      height: calc(120px + 6vw);
+    }
+    .line{background: white;}
+    .dawn{
+      position: absolute;
+      left: 36%;
+      bottom: 18vw;
+      transition: all 1.2s ease;
+      @include g.mq() {
+        left: 42%;
+        bottom: 10vw;
+      }
+      
+      &:hover{
+        bottom: 23vw;
+        @include g.mq() {
+          bottom: 13vw;
+        }
+      }
+      .sunshine1{
+        position: absolute;
+        width: 48vw;
+        height: 2px;
+        left: -10vw;
+        bottom: -14vw;
+        @include g.mq() {
+          width: 24vw;
+          left: -5vw;
+          bottom: -7vw;
+          }
+        /* Interesting animation will appear*/
+        /*
+        background: white;
+        */
+        animation: sunShine1 .8s ease-in-out infinite;
+        &::before{
+          position: absolute;
+          content: '';
+          display: block;
+          width: 48vw;
+          height: 2px;
+          transform: rotate(30deg);
+          animation: sunShine2 .8s ease-in-out infinite;
+          @include g.mq() {
+            width: 24vw;
+            }
+        }
+        &::after{
+          position: absolute;
+          content: '';
+          display: block;
+          width: 48vw;
+          height: 2px;
+          transform: rotate(60deg);
+          animation: sunShine3 .8s ease-in-out infinite;
+          @include g.mq() {
+            width: 24vw;
+            }
+        }
+      }
+      .sunshine2{
+        position: absolute;
+        width: 48vw;
+        height: 2px;
+        left: -10vw;
+        bottom: -14vw;
+        transform: rotate(90deg);
+        animation: sunShine4 .8s ease-in-out infinite;
+        @include g.mq() {
+          left: -5vw;
+          bottom: -7vw;
+          width: 24vw;
+          }
+        &::before{
+          position: absolute;
+          content: '';
+          display: block;
+          width: 48vw;
+          height: 2px;
+          transform: rotate(30deg);
+          animation: sunShine5 .8s ease-in-out infinite;
+          @include g.mq() {
+            width: 24vw;
+            }
+        }
+        &::after{
+          position: absolute;
+          content: '';
+          display: block;
+          width: 48vw;
+          height: 2px;
+          transform: rotate(60deg);
+          animation: sunShine6 .8s ease-in-out infinite;
+          @include g.mq() {
+            width: 24vw;
+            }
+        }
+      }
+      @keyframes sunShine1 {
+        0%{background: linear-gradient(45deg,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent);}
+        20%{background: linear-gradient(45deg,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent);}
+        40%{background: linear-gradient(45deg,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent);}
+        60%{background: linear-gradient(45deg,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent);}
+        80%{background: linear-gradient(45deg,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white);}
+        100%{background: linear-gradient(45deg,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent);}
+      }
+      @keyframes sunShine2 {
+        0%{background: linear-gradient(75deg,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white);}
+        20%{background: linear-gradient(75deg,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent);}
+        40%{background: linear-gradient(75deg,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent);}
+        60%{background: linear-gradient(75deg,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent);}
+        80%{background: linear-gradient(75deg,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent);}
+        100%{background: linear-gradient(75deg,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent);}
+      }
+      @keyframes sunShine3 {
+        0%{background: linear-gradient(105deg,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent);}
+        20%{background: linear-gradient(105deg,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent);}
+        40%{background: linear-gradient(105deg,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent);}
+        60%{background: linear-gradient(105deg,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent);}
+        80%{background: linear-gradient(105deg,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white);}
+        100%{background: linear-gradient(105deg,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent);}
+      }
+      @keyframes sunShine4 {
+        0%{background: linear-gradient(135deg,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white);}
+        20%{background: linear-gradient(135deg,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent);}
+        40%{background: linear-gradient(135deg,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent);}
+        60%{background: linear-gradient(135deg,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent);}
+        80%{background: linear-gradient(135deg,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent);}
+        100%{background: linear-gradient(135deg,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent);}
+      }
+      @keyframes sunShine5 {
+        0%{background: linear-gradient(165deg,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent);}
+        20%{background: linear-gradient(165deg,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent);}
+        40%{background: linear-gradient(165deg,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent);}
+        60%{background: linear-gradient(165deg,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent);}
+        80%{background: linear-gradient(165deg,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white);}
+        100%{background: linear-gradient(165deg,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent);}
+      }
+      @keyframes sunShine6 {
+        0%{background: linear-gradient(195deg,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white);}
+        20%{background: linear-gradient(195deg,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent);}
+        40%{background: linear-gradient(195deg,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent);}
+        60%{background: linear-gradient(195deg,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent);}
+        80%{background: linear-gradient(195deg,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent);}
+        100%{background: linear-gradient(195deg,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent,white,transparent,transparent,transparent,transparent,transparent);}
+      }
+      input[type=submit]{
+        position: absolute;
+        width: 28vw;
+        height: 28vw;
+        margin: 0 auto;
+        border-radius: 14vw;
+        font-size: calc(12px + .6vw);
+        text-align: center;
+        color: black;
+        background: white;
+        z-index: 1;
+        @include g.mq() {
+          width: 14vw;
+          height: 14vw;
+          border-radius: 7vw;
+          }
+    
+      }
+    }
+  }
+  .scrolldown1::after{background: white;}
+}

@@ -1,0 +1,131 @@
+@use "../global" as g;
+
+/*!
+foundation > base
+------------------------------
+*/
+body {
+    position: relative;
+    z-index: -1;
+    font-family: var(--font-family-base);
+    background-color: #e6e6e6;
+      /*hide scroll bar*/
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &.no-scroll{
+        overflow: hidden;
+    }
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    @include g.mq() {
+        font-size: 16px;
+    }
+}
+.section-end{
+    width: 100%;
+    background: linear-gradient(180deg,#e6e6e6,white);
+
+    section{
+        background: none;
+    }
+}
+
+section{
+    position: relative;
+    height: auto;
+    padding: 0 16px;
+    background: #e6e6e6;
+    overflow: hidden;
+
+    @include g.mq() {
+    padding: 0 40px;
+    }
+
+    /*
+    &:first-of-type{
+        padding-top: 240px;
+    }
+    */
+    /*
+    section:first-of-type{padding: 240px 0 0;}
+    */
+    /*
+    &:last-of-type{
+        background: linear-gradient(180deg,#e6e6e6,white);
+    }
+    */
+     #title{
+        width: 100%;
+        padding: 0;
+    }
+     .line{
+        background: black;
+    }
+}
+section#title{padding: 0;}
+.section{
+    position: relative;
+    height: auto;
+    padding: 0 16px;
+    background: #e6e6e6;
+    overflow: hidden;
+
+    @include g.mq() {
+    padding: 0 40px;
+    }
+}
+.section-title{
+    font-size: 52px;
+    text-align: center;
+    padding-top: 80px;
+}
+section#home-intro{
+    padding: 0 16px;
+
+    @include g.mq() {
+    padding: 0 40px;
+    }
+}
+/* links-wrapper */
+#links-wrapper{
+    display: none;
+    flex-wrap: wrap;
+    list-style: none;
+    position: absolute;
+    right: 0;
+    margin: 0 16px 0 0;
+    @include g.mq() {
+        display: flex;
+    }
+}
+.btn-link a{
+    position: relative;
+    padding: 10px 24px;
+    justify-content: space-between;
+    transition: 2s opacity;
+    @include g.mq() {
+        padding: 10px 24px;
+    }
+}
+.btn-link a:hover{
+    opacity: 0.5;
+    transition: 0.6s opacity;
+}
+.btn-link a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: black;
+    transition: all .3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: left top;/*左上基点*/
+}
+.btn-link a:hover::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*/
+}

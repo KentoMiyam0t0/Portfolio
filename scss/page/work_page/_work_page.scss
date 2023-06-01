@@ -1,0 +1,87 @@
+@use "../../global" as g;
+
+/*!
+page > work_page > work_page
+------------------------------
+*/
+
+#work_page{
+  .gallery{
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  .gallery--single{
+    ul{
+      display: block;
+      video{width: 100%;}
+    }
+  }
+  .gallery--column2{
+    ul{
+      display: block;
+      columns: 2;
+      li{
+        padding-bottom: 1.5%;
+      }
+    }
+  }
+  .gallery--flex2{
+    ul{
+      &::before,&::after{
+        content:"";
+        display: block;
+        width:49%;
+        order:1;
+      }
+      &::before{
+        order:1;
+      }
+      li{
+        width: 49%;
+        padding-bottom: 1.5%;
+      }
+    }
+  }
+  .gallery--flex3{
+    ul{
+      &::before,&::after{
+        content:"";
+        display: block;
+        width:32.4%;
+        order:1;
+      }
+      &::before{
+        order:1;
+      }
+      li{
+        width: 32.4%;
+        padding-bottom: 1.5%;
+      }
+    }
+  }
+  .gallery--flex4{
+    ul{
+      &::before,&::after{
+        content:"";
+        display: block;
+        width:24%;
+        order:1;
+      }
+      &::before{
+        order:1;
+      }
+      li{
+        width: 24%;
+        padding-bottom: 1.5%;
+      }
+    }
+  }
+  .masonry-wrap ul{
+    position: relative;
+    ul{position: absolute;}
+  }
+  .bottom{margin-bottom: 10vw;}
+}

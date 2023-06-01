@@ -1,0 +1,103 @@
+@use "../global" as g;
+
+/*!
+layout > fixed-nav
+------------------------------
+*/
+
+/* Fixed-nav */
+.fixed-nav{
+    position: fixed;
+    right: -120%;
+    top: 0;
+    height: 100vh;
+    width: 80vw;
+    color: white;
+    background: #1C1D20;
+    z-index: 5;
+    border-radius: 100%;
+    box-shadow: -10px 0 80px 80px rgba(22,23,26,0.5);
+    transition: all .7s;
+    transition-timing-function: ease-in;
+    @include g.mq() {
+        width: 40vw;
+        transition: all 1.6s;
+    }
+    
+    a{
+        right: 24px;
+    }
+    &.display{
+        right: 0;
+        border-radius: 0;
+        transition: all 0.4s;
+        transition-timing-function: ease-in;
+        @include g.mq() {
+            transition: all 0.6s;
+        }
+    }
+    .links-wrap{
+        .btn-link{
+            margin-bottom: 24px;
+            
+            a{
+                font-size: calc(24px + 4.4vw);
+                color: white;
+                @include g.mq() {
+                    font-size: 48px;
+                }
+
+                &::after{
+                    background: #9969f5;
+                    transform-origin: right top;/*左上基点*/
+                }
+                &.active{
+                    color: #9969f5;
+                }
+
+            }
+        }
+    }
+    .socials{
+        margin-top: 30%;
+    }
+    .links-wrapper{
+        display: flex;
+        list-style: none;
+        position: relative;
+        .btn-link a::after{
+            background: #9969f5;
+            transform-origin: right top;/*左上基点*/
+        }
+    }
+    .fixed-nav-inner{
+        padding: 80px 10% 40px 12%; 
+        position: relative;
+        right: -120%;
+        transition: all 1.2s;
+        transition-timing-function: ease-in;
+        @include g.mq() {
+            padding: 128px 10% 40px 12%; 
+            transition: all 1.4s;
+        }
+    
+        &.display{
+            right: 0;
+            transition: all .8s;
+            @include g.mq() {
+                transition: all .8s;
+            }
+        }
+    }
+      
+}
+.fixed-nav-title{
+    margin-bottom: 24px;
+}
+.line{
+    opacity: .2;
+    height: 1px;
+    width: 100%;
+    background: white;
+    margin-bottom: 3vw;
+}

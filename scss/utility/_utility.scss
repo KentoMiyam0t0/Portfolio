@@ -1,0 +1,13 @@
+@use "../global" as g;
+
+/*!
+utility > utility
+------------------------------
+*/
+.u-ptb {
+    padding: 64px 0 !important;
+
+    @include g.mq() {
+        padding: 80px 0 !important;
+    }
+}

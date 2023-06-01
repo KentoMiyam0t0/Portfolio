@@ -1,0 +1,129 @@
+@use "../../global" as g;
+
+/*!
+page > home > home-recentworks
+------------------------------
+*/
+
+.recent-works-wrap{
+    padding-top: 2%;
+    margin: 0 auto;
+    @include g.mq() {
+        max-width: 84vw;
+    }
+
+    >ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 10vw;
+    }
+}
+li.recent-work{
+    width: 48.5%;
+    margin-bottom: 3vw;
+    /*height: calc(82vw / 3 + 17vw );*/
+    background: #e6e6e6;
+    border-radius: 8px;
+    box-shadow: -4px -3px 5px -1px #fdfdfd, 2px 2px 8px 2px rgba(90, 117, 141, 0.62);
+    transition: all 0.4s;
+
+    @include g.mq() {
+        width: 31%;
+        margin-bottom: 0;
+        box-shadow: -8px -7px 9px -1px #fdfdfd, 4px 4px 15px 2px rgba(90, 117, 141, 0.62);
+    }
+    /*Apple仕様*/
+    /*
+    transition: all 0.3s;
+    */
+
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .text-box{
+        padding: 2vw 2.8vw 4.2vw ;
+    }
+    .line{margin: 8% 0;}
+    .work{
+        position: relative;
+        background-color: #f0f0f0;
+        /*background-color: #e6e6e6;*/
+        min-width: 31%;
+        height: 46.1vw;
+        margin: 0;
+        border-radius: 8px 8px 0 0;
+        /*border: solid 1.4vw #f0f0f0;*/
+        box-shadow: none;
+
+        @include g.mq() {
+            height: 26vw;
+        }
+
+        &:hover{
+            box-shadow: none;
+            transform: none;
+        }
+        
+        span{
+            font-size: calc(18px + .6vw);
+            display: block;
+            text-align: center;
+            line-height: 46.1vw;
+        
+            @include g.mq() {
+                line-height: 26vw;
+            }
+        }
+
+    }
+}
+  /*
+  .work{
+    position: relative;
+    background-color: #f0f0f0;
+    min-width: calc(82vw / 4 );
+    margin: 0 2% 2% 0;
+    height: calc(82vw / 4 );
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: -8px -7px 9px -1px #fdfdfd, 4px 4px 15px 2px rgba(90, 117, 141, 0.62);
+    background-size: cover;
+    background-position: center;
+    transition: all 0.4s;
+  }
+  .work:hover,.recent-work:hover{
+    box-shadow: -8px -7px 9px -1px #fff, 4px 4px 15px 2px rgba(90, 117, 141, 0.92);
+    transform: scale(1.02);
+    transition: all 0.6s;
+  }
+  */
+
+.recent-work-title{
+    font-size: calc(14px + 1vw);
+    @include g.mq() {
+        font-size: calc(12px + 1.4vw);
+    }
+}
+.recent-work-roll{
+    font-size: calc(14px + 0.4vw);
+    border: solid 1px rgba(0,0,0,.3);
+    padding: 8px 12px;
+    margin: 0 8px 8px 0;
+    /*
+    margin-right: 8px;
+    */
+    border-radius: 2vw;
+    @include g.mq() {
+        font-size: 16px;
+    }
+}
+.recent-left{
+    position: relative;
+    margin-left: 8vw;
+}
+.recent-right{
+    position: relative;
+    margin-right: 8vw;
+}

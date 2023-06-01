@@ -1,0 +1,83 @@
+@use "../../global" as g;
+
+/*!
+page > about > about
+------------------------------
+*/
+
+.intro-interview-wrap{
+  margin: 0 auto;
+  @include g.mq() {
+    display: flex;
+    justify-content:space-between;
+    width: 84vw;
+  }
+  .interview{
+    line-height: 1.66;
+    @include g.mq(sm) {
+      margin-bottom: 32px;
+    }
+    @include g.mq() {
+      width: 31%;
+    }
+  }
+  .interview-img{
+    min-width: 65.6%;
+    height: 100vw;
+    position: relative;
+    box-sizing: border-box;
+    background-image: url(/image/interview.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include g.mq() {
+      height: 74vw;
+    }
+  }
+}
+.intro-services{
+  width: 100%;
+  margin: 0 auto;
+  @include g.mq() {
+    width: calc(84vw + 80px);
+  }
+
+  h2{
+    font-size: calc(18px + 2.2vw);
+    margin: 8vw 0 6vw;
+  }
+
+  .service-list{
+    margin-bottom: 10vw;
+    @include g.mq() {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    :nth-child(1) .line{
+      display: none;
+      @include g.mq() {
+        display: inline-block;
+        }
+    }
+  
+    .service-detail{
+      margin-bottom: 6vw;
+      @include g.mq() {
+      width: 31%;
+      }
+      
+      h5{
+        display: none;
+        @include g.mq() {
+          display: inline-block;
+          }
+      }
+      h3{
+        font-size: calc(16px + 1.4vw);
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+  

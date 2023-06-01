@@ -1,0 +1,114 @@
+@use "../../global" as g;
+
+/*!
+page > home > home-works-carousel
+------------------------------
+*/
+
+.works-title{
+    text-align: center;
+}
+#title .line{
+    margin-bottom: calc(5vw - 16px);
+    @include g.mq() {
+        margin-bottom: calc(3vw - 16px);
+    }
+}
+.works-wrap{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: auto;
+    max-width: 82vw;
+    right: 6vw;
+    padding-top: 16px;
+    margin: 0 auto;
+    transition-timing-function: ease-in;
+}
+.works-wrap:nth-child(even){right: 38vw;}
+.works-wrap:nth-of-type(2){padding-bottom: 120px;}
+.work{
+    position: relative;
+    background-color: #f0f0f0;
+    min-width: calc(82vw / 4 );
+    margin: 0 2% 2% 0;
+    height: calc(82vw / 4 );
+    /*border: solid 1.4vw #f0f0f0;*/
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: -4px -3px 5px -1px #fdfdfd, 2px 2px 8px 2px rgba(90, 117, 141, 0.62);
+    background-size: cover;
+    background-position: center;
+    transition: all 0.4s;
+    @include g.mq() {
+        box-shadow: -8px -7px 9px -1px #fdfdfd, 4px 4px 15px 2px rgba(90, 117, 141, 0.62);
+    }
+
+    &:nth-of-type(){
+        margin-right: 0;
+    }
+
+    video{
+        width: 100%;
+        border-radius: 8px;
+    }
+}
+.work:hover,.recent-work:hover{
+    box-shadow: -8px -7px 9px -1px #fff, 4px 4px 15px 2px rgba(90, 117, 141, 0.92);
+    transform: scale(1.02);
+    transition: all 0.6s;
+}
+.work00 span{
+    font-size: 10px;
+    display: block;
+    text-align: center;
+    line-height: calc(82vw / 4);
+    /* if you need a border then use below */
+    /*
+    min-width: calc(82vw / 4 (-1.4vw * 2));
+    height: calc(82vw / 4 (-1.4vw * 2));
+    line-height: calc(82vw / 4 - (12px + .6vw));
+    */
+    @include g.mq() {
+        font-size: calc(12px + .6vw);;
+    }
+}
+/*
+.work00::before{
+content: "Coming soon";
+min-width: calc(24% + (-1.4vw * 2));
+height: calc(82vw / 4 (-1.4vw * 2));
+font-size: calc(12px + .6vw);
+position: absolute;
+left: 25%;
+text-align: center;
+margin: auto;
+line-height: calc(82vw / 4 - (12px + .6vw));
+transform: none;
+}
+.work00:hover::before{
+transform: none;
+min-width: 100%;
+}
+*/
+.work--{
+    &daily-ui{
+        background-image: url(/image/thumb_daily-ui.webp);
+    }
+    &logo-design{
+        background-image: url(/image/thumb_logo-design.webp);
+    }
+    &concept-art{
+        background-image: url(/image/thumb_concept-art.webp);
+    }
+    &pixel-art{
+        background-image: url(/image/thumb_pixel-art.webp);
+    }
+    &simple-landscape{
+        background-image: url(/image/thumb_simple-landscape.webp);
+    }
+    &3d-illustration{
+        background-image: url(/image/thumb_3d-illustration.webp);
+    }
+}
