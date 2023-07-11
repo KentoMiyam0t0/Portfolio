@@ -93,6 +93,12 @@ min-width: 100%;
 }
 */
 .work--{
+    &front-end-3d-parallax{
+        background-image: url(/image/thumb_3d-parallax.webp);
+    }
+    &front-end-dashboard{
+        background-image: url(/image/thumb_dashboard.webp);
+    }
     &daily-ui{
         background-image: url(/image/thumb_daily-ui.webp);
     }

@@ -1,0 +1,197 @@
+@use "mixin" as m;
+/*----------- MAIN -----------*/
+main{
+    margin-top: 1.4rem;
+    @include m.mq(sp) {
+        margin-top: 8rem;
+        padding: 0 1rem;
+    }
+    .date{
+        display: inline-block;
+        background: var(--color-light);
+        border-radius: var(--border-radius-1);
+        margin-top: 1rem;
+        padding: 0.5rem 1.6rem;
+        
+        input[type="date"]{
+            background: transparent;
+            color: var(--color-dark);
+        }
+    }
+    .insights{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1.6rem;
+        animation: 1500ms ease 0ms 1 normal forwards running fadeIn;
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @include m.mq(pc) {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+        h3{
+            margin: 1.6rem 0 0.6rem;
+            //margin: 1rem 0 0.6rem;
+            font-size: 1rem;
+        }
+
+        .progress{
+            position: relative;
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+            .number{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        svg{
+            width: 7rem;
+            height: 7rem;
+            transform: rotate(-90deg);
+
+            circle{
+                fill: none;
+                stroke: var(--color-primary);
+                stroke-width: 14;
+                stroke-linecap: round;
+                transform: translate(12px, 5px);
+                stroke-dasharray: calc(80 * 3.14);
+                animation: circleAnim 1s forwards;
+            }
+            @keyframes circleAnim {
+                0% {
+                    stroke-dasharray: 0 calc(80 * 3.14);
+                }
+                99.9%, to {
+                    stroke-dasharray: calc(80 * 3.14) calc(80 * 3.14);
+                }
+            }
+        }
+        
+        .sales svg circle{
+            stroke-dashoffset: calc((80 * 3.14) - ((80 * 3.14 * 81) / 100));
+        }
+        .expenses svg circle{
+            stroke-dashoffset: calc((80 * 3.14) - ((80 * 3.14 * 62) / 100));
+        }
+        .income svg circle{
+            stroke-dashoffset: calc((80 * 3.14) - ((80 * 3.14 * 44) / 100));
+        }
+        
+        small{
+            margin-top: 1.6rem;
+            display: block;
+        }
+    }
+    .insights > div{
+        background: var(--color-white);
+        padding: var(--card-padding);
+        border-radius: var(--card-border-radius);
+        margin-top: 1.4rem;
+        //margin-top: 1rem;
+        box-shadow: var(--box-shadow);
+        transition: all .3s ease;
+        &:hover{
+            box-shadow: none;
+        }
+        &.expenses span{
+            background: var(--color-danger);
+        }
+        &.income span{
+            background: var(--color-success);
+        }
+
+        span{
+            background: var(--color-primary);
+            padding: .5rem;
+            border-radius: 50%;
+            color: var(--color-white);
+            font-size: 2rem;
+        }
+        .middle{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            .left h1{
+                margin-bottom: 1.4rem;
+            }
+        }
+    }
+    .recent-orders{
+        margin-top: 2rem;
+        @include m.mq(pc) {
+            width: 83vw;
+            position: absolute;
+            // fix
+            /*
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 2rem 0 0 8.8rem;
+            */
+        }
+        @include m.mq(sp) {
+            position: relative;
+            margin: 3rem 0 0 0;
+            width: 100%;
+        }
+        
+        h2{
+            margin-bottom: .8rem;
+        }
+        div{
+            @include m.mq(sp) {
+                overflow-x: scroll;
+            }
+
+            table{
+                background: var(--color-white);
+                width: 100%;
+                border-radius: var(--card-border-radius);
+                padding: var(--card-padding);
+                text-align: center;
+                box-shadow: var(--box-shadow);
+                transition: all .3s ease;
+                @include m.mq(pc) {
+                    //width: 83vw;
+                }
+                @include m.mq(sp) {
+                    width: 180%;
+                    margin: 0;
+                    overflow-x: scroll;
+                }
+                &:hover{
+                    box-shadow: none;
+                }
+                tr{
+                    color: var(--color-dark-variant);
+                    &:last-child td{
+                        border: none;
+                    }
+                }
+                td{
+                    height: 2.8rem;
+                    border-bottom: 1px solid var(--color-light);
+                }
+            }
+        }
+        a{
+            text-align: center;
+            display: block;
+            margin: 1rem auto;
+            color: var(--color-primary);
+        }
+    }
+}

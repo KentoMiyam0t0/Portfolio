@@ -24,7 +24,7 @@ page > work_page > work_page
       display: block;
       columns: 2;
       li{
-        padding-bottom: 1.5%;
+        padding: 1.6vw 1vw;
       }
     }
   }
@@ -83,5 +83,5 @@ page > work_page > work_page
     position: relative;
     ul{position: absolute;}
   }
-  .bottom{margin-bottom: 10vw;}
+  .bottom{margin-bottom: 16vh;}
 }

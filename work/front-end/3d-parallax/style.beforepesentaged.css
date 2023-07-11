@@ -48,11 +48,6 @@ header ul a {
     text-transform: uppercase;
     font-weight: 300;
     font-size: 0.83rem;
-    transition: font-size 0.6s,transform 0.6s;
-}
-header ul a:hover {
-    font-size: 1rem;
-    transform: scale(1.2);
 }
 
 .search a{
@@ -70,7 +65,7 @@ header ul a:hover {
     height: 37px;
     display: flex;
     border-radius: 50%;
-    background-color: rgba(11,55,45,.6);
+    background-color: rgba(115, 115, 115, 0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     justify-content: center;
@@ -116,112 +111,111 @@ main{
 }
 .bg-img{
     position: absolute;
-    width: calc(2800 / 1920 * 100%);/* 2800px */
+    width: calc(2800 / 1440 * 100%);/* 2800px */
     /*width: 2800px;*/
-    top: calc(50% - 306 / 1080 * 100%);
+    top: calc(50% - 390px);
     /*top: calc(50% - 390px);*/
-    left: calc(50% + 10 / 1920 * 100%);
+    left: 50.69%;
     /*left: calc(50% + 10px);*/
     z-index: 1;
 }
 
 .fog-5{
     position: absolute;
-    width: calc(2000 / 1920 * 100%);
-    top: calc(50% + 270 / 1080 * 100%);
-    left: calc(50% - 50 / 1920 * 100%);
+    width: 2000px;
+    top: calc(50% + 270px);
+    left: calc(50% + 50px);
     z-index: 2;
 }
 .fog-4{
     position: absolute;
-    width: calc(2000 / 1920 * 100%);
-    top: calc(50% + 210 / 1080 * 100%);
-    left: calc(50% - 200 / 1920 * 100%);
+    width: 2000px;
+    top: calc(50% + 210px);
+    left: calc(50% - 200px);
     z-index: 3;
 }
 .mountain-9{
     position: absolute;
-    width: calc(450 / 1920 * 100%);
-    top: calc(50% + 150 / 1080 * 100%);
-    left: calc(50% - 319 / 1920 * 100%);
+    width: 450px;
+    top: calc(50% + 150px);
+    left: calc(50% - 319px);
     z-index: 4;
 }
 .mountain-8{
     position: absolute;
-    width: calc(260 / 1920 * 100%);
-    top: calc(50% + 172 / 1080 * 100%);
-    left: calc(50% - 750 / 1920 * 100%);
+    width: 260px;
+    top: calc(50% + 172px);
+    left: calc(50% - 750px);
     z-index: 5;
 }
 .mountain-7{
     position: absolute;
-    width: calc(230 / 1920 * 100%);
-    top: calc(50% + 150 / 1080 * 100%);
+    width: 230px;
+    top: calc(50% + 150px);
     left: calc(50% + 610px);
-    left: calc(50% + 610  / 1920 * 100%);
     z-index: 6;
 }
 .fog-3{
     position: absolute;
-    width: calc(1600 / 1920 * 100%);
-    top: calc(50% + 194 / 1080 * 100%);
-    left: calc(50% - 96 / 1920 * 100%);
+    width: 1600px;
+    top: calc(50% + 194px);
+    left: calc(50% - 96px);
     z-index: 7;
 }
 .mountain-6{
     position: absolute;
-    width: calc(200 / 1920 * 100%);
-    top: calc(50% + 222 / 1080 * 100%);
-    left: calc(50% - 540 / 1920 * 100%);
+    width: 200px;
+    top: calc(50% + 222px);
+    left: calc(50% - 540px);
     z-index: 8;
 }
 .mountain-5{
     position: absolute;
-    width: calc(800 / 1920 * 100%);
-    top: calc(50% + 210 / 1080 * 100%);
-    left: calc(50% + 450 / 1920 * 100%);
+    width: 800px;
+    top: calc(50% + 210px);
+    left: calc(50% + 450px);
     z-index: 9;
 }
 .fog-2{
     position: absolute;
-    width: calc(1900 / 1920 * 100%);
-    top: calc(50% + 200 / 1080 * 100%);
+    width: 1900px;
+    top: calc(50% + 200px);
     left: calc(50%);
     z-index: 10;
 }
 .fog-1{
     position: absolute;
-    width: calc(1900 / 1920 * 100%);
-    top: calc(50% + 290 / 1080 * 100%);
-    left: calc(50% - 50 / 1920 * 100%);
+    width: 1900px;
+    top: calc(50% + 290px);
+    left: calc(50% - 50px);
     z-index: 11;
 }
 .mountain-4{
     position: absolute;
-    width: calc(500 / 1920 * 100%);
-    top: calc(50% + 330 / 1080 * 100%);
-    left: calc(50% - 10 / 1920 * 100%);
+    width: 500px;
+    top: calc(50% + 310px);
+    left: calc(50% - 10px);
     z-index: 12;
 }
 .mountain-3{
     position: absolute;
-    width: calc(600 / 1920 * 100%);
-    top: calc(50% + 210 / 1080 * 100%);
-    left: calc(50% - 700 / 1920 * 100%);
+    width: 600px;
+    top: calc(50% + 210px);
+    left: calc(50% - 700px);
     z-index: 13;
 }
 .mountain-2{
     position: absolute;
-    width: calc(900 / 1920 * 100%);
-    top: calc(50% + 420 / 1080 * 100%);
-    left: calc(50% - 290 / 1920 * 100%);
+    width: 900px;
+    top: calc(50% + 330px);
+    left: calc(50% - 290px);
     z-index: 14;
 }
 .mountain-1{
     position: absolute;
-    width: calc(600 / 1920 * 100%);
-    top: calc(50% + 70 / 1080 * 100%);
-    left: calc(50% + 700 / 1920 * 100%);
+    width: 600px;
+    top: calc(50% + 70px);
+    left: calc(50% + 700px);
     z-index: 14;
 }
 
@@ -319,113 +313,6 @@ main{
         height: 30px;
         width: 30px;
     }
-    .bg-img{
-        width: initial;
-        height: calc(2800 / 1920 * 100% * 1.6);
-    }
-    
-    .fog-5{
-        width: initial;
-        height: calc(2000 / 1920 * 100% * 1.6);
-    }
-    .fog-4{
-        width: initial;
-        height: calc(2000 / 1920 * 100% * 1.6);
-    }
-    .mountain-9{
-        width: initial;
-        height: calc(450 / 1920 * 100% * 1.6);
-    }
-    .mountain-8{
-        width: initial;
-        height: calc(260 / 1920 * 100% * 1.6);
-    }
-    .mountain-7{
-        width: initial;
-        height: calc(230 / 1920 * 100% * 1.6);
-    }
-    .fog-3{
-        width: initial;
-        height: calc(1600 / 1920 * 100% * 1.6);
-    }
-    .mountain-6{
-        width: initial;
-        height: calc(200 / 1920 * 100% * 1.6);
-    }
-    .mountain-5{
-        width: initial;
-        height: calc(800 / 1920 * 100% * 1.6);
-    }
-    .fog-2{
-        width: initial;
-        height: calc(1900 / 1920 * 100% * 1.6);
-    }
-    .fog-1{
-        width: initial;
-        height: calc(1900 / 1920 * 100% * 1.6);
-    }
-    .mountain-4{
-        width: initial;
-        height: calc(500 / 1920 * 100% * 1.6);
-        left: calc(50% + 430 / 1920 * 100%);
-    }
-    .mountain-3{
-        width: initial;
-        height: calc(600 / 1920 * 100% * 1.6);
-        top: calc(50% + 280 / 1080 * 100%);
-        left: calc(50% - 500 / 1920 * 100%);
-    }
-    .mountain-2{
-        width: initial;
-        height: calc(900 / 1920 * 100% * 1.6);
-    }
-    .mountain-1{
-        width: initial;
-        height: calc(600 / 1920 * 100% * 1.6);
-        top: calc(50% + 280 / 1080 * 100%);
-        left: calc(50% + 570 / 1920 * 100%);
-    }
-    /*
-    .text{
-        width: initial;
-        z-index: 10;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        text-transform: uppercase;
-        color: #fff;
-        pointer-events: auto;
-    }
-    .text .title-sub{
-        font-weight: 100;
-        font-size: 6.5rem;
-        line-height: 0.88;
-    }
-    
-    .text h1{
-        font-weight: 800;
-        font-size: 8rem;
-        line-height: 0.88;
-    }
-    
-    .sun-rays{
-        width: initial;
-        z-index: 19;
-        top: 0;
-        left: 0;
-        width: 596px;
-        pointer-events: none;
-    }
-    .shadow{
-        width: initial;
-        z-index: 19;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        pointer-events: none;
-    }
-    */
 }
 @media (max-width: 520px){
     .text .title-sub{

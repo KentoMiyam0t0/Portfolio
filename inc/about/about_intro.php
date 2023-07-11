@@ -17,14 +17,14 @@
                 <li class="service-detail">
                     <h5>01</h5>
                     <div class="line"></div>
-                    <h3>UI Design</h3>
-                    <p>With expertise in service and website creation, I deliver designs that maximize audience impact. Combining development and business perspectives, I provide visually appealing and strategic designs.</p>
+                    <h3>Front-End Development</h3>
+                    <p>I will leverage my experience as a designer to deliver user-friendly front-end solutions that optimize maintainability and operability. With my combined expertise in development and design, I offer a unique perspective that ensures top-notch service.</p>
                 </li>
                 <li class="service-detail">
                     <h5>02</h5>
                     <div class="line"></div>
-                    <h3>Front-End Development</h3>
-                    <p>I will leverage my experience as a designer to deliver user-friendly front-end solutions that optimize maintainability and operability. With my combined expertise in development and design, I offer a unique perspective that ensures top-notch service.</p>
+                    <h3>Design</h3>
+                    <p>With expertise in service and website creation, I deliver designs that maximize audience impact. Combining development and business perspectives, I provide visually appealing and strategic designs.</p>
                 </li>
                 <li class="service-detail">
                     <h5>03</h5>
