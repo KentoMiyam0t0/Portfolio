@@ -43,7 +43,7 @@
             <li class="recent-work">
                 <!--<a href="">-->
                     <div class="work">
-                        <span>Work in progress</span>
+                        <span>Coming Soon</span>
                     </div>
                     <div class="text-box">
                         <h3 class="recent-work-title">

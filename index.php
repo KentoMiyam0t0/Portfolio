@@ -2,9 +2,9 @@
 include 'inc/global/head.php';
 ?>
 <title>Kento Miyamoto • Designer & Developer</title>
-<meta name="description" content="As a UI DESIGNER & FRONT-END DEVELOPER, I want to help business create innovative design solutions that both empower and engage customers. © Code by Kento" />
-<meta property="og:title" content="Kento Miyamoto • Designer & Developer" />
-<meta property="og:description" content="As a UI DESIGNER & FRONT-END DEVELOPER, I want to help business create innovative design solutions that both empower and engage customers. © Code by Kento" />
+<meta name="description" content="As a FRONT-END DEVELOPER & DESIGNER, I want to help business create innovative design solutions that both empower and engage customers. © Code by Kento" />
+<meta property="og:title" content="Kento Miyamoto • Developer & Designer" />
+<meta property="og:description" content="As a FRONT-END DEVELOPER & DESIGNER, I want to help business create innovative design solutions that both empower and engage customers. © Code by Kento" />
 <meta property="og:site_name" content="Kento Miyamoto" />
 <meta property="og:image" content=" https://kentomiyamoto.com/image/ogp.webp" />
 </head>
